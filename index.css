@@ -1,0 +1,92 @@
+
+/* Fullscreen slideshow container */
+.slideshow-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh; /* Fullscreen */
+    background-color: white; /* White background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents unwanted scrollbars */
+}
+
+/* Common slide styles */
+.slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfect Center */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    text-align: center;
+    width: 90%;
+}
+
+/* First image styling */
+.slide img {
+    width: 85%;
+    max-width: 650px;
+    display: block;
+}
+
+/* Make first image even bigger */
+.slide:first-child img {
+    width: 95%;
+    max-width: 750px;
+}
+
+/* "Presents" & "GEOMITRA 2025" Styling */
+.text-slide,
+.geomitra-title {
+    font-size: clamp(2rem, 4vw, 3rem); /* Responsive font size */
+    font-weight: bold;
+    color: #2E3192; /* Light Blue */
+    text-align: center;
+    display: inline-block; /* Keep text on the same line */
+    max-width: 90%; /* Ensures text doesn't overflow */
+}
+
+/* "Where geometry meets artistry" (Much smaller & aligned) */
+.geomitra-subtext {
+    font-size: clamp(0.9rem, 2.5vw, 1.5rem); /* Responsive subtitle */
+    color: #2E3192;
+    display: block; /* Ensures proper alignment */
+    margin-top: 5px; /* Small spacing */
+    max-width: 85%;
+    word-wrap: break-word; /* Prevents overflow */
+}
+
+/* Responsive adjustments for small screens (phones & tablets) */
+@media screen and (max-width: 768px) {
+    .slide img {
+        width: 90%;
+        max-width: 400px;
+    }
+    .slide:first-child img {
+        width: 95%;
+        max-width: 450px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .slide img {
+        width: 100%;
+        max-width: 350px;
+    }
+    .slide:first-child img {
+        width: 100%;
+        max-width: 400px;
+    }
+    .text-slide,
+    .geomitra-title {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+    }
+    .geomitra-subtext {
+        font-size: clamp(0.8rem, 3vw, 1.2rem);
+    }
+}

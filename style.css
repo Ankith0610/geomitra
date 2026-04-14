@@ -1,0 +1,317 @@
+/* ---------- Reset and Font ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #FDB913; /* Yellow-Gold Background */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 100px; /* Adjusted to prevent overlap with logo */
+}
+
+/* ---------- Main Heading ---------- */
+/* ------------------ Main Heading ------------------ */
+.main-heading {
+    text-align: center;
+    color: #ffffff;
+    margin: 10px 0 20px; /* Smaller top space, more bottom */
+    line-height: 1.3; /* Tighter spacing */
+    letter-spacing: 1px; /* Moderate spacing */
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    font-weight: 700; /* Slightly less bold */
+}
+
+/* Smaller font for "GEOMITRA 2025" */
+.main-heading .event-name {
+    font-size: 1.8rem; /* Moderate */
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Smaller and neat for department */
+.main-heading .department {
+    font-size: 1.2rem; /* Smaller */
+    display: block;
+    font-weight: 600; /* Slightly bold */
+    letter-spacing: 0.5px; /* Closer letters */
+}
+
+
+/* ---------- Form Container ---------- */
+.container {
+    text-align: center;
+    color: black; /* Ensure all text is black */
+    backdrop-filter: none; /* Remove blur */
+    width: 90%; /* Keep it responsive */
+    max-width: 400px; /* Limit width */
+    background: white; /* Solid white background */
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid black; /* Add black border */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    transition: all 0.3s ease-in-out;
+}
+.logo-container {
+    position: fixed; /* Stick it at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto; /* Let it adjust based on content */
+    background-color: #2E3192; /* Full width background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0; /* Extra padding for spacing */
+    z-index: 1000; /* Keep it above other elements */
+}
+
+/* Logo Styling */
+.logo-container img {
+    width: auto;
+    max-width: 80%;
+    height: auto;
+    max-height: 80px; /* Adjusted for better scaling */
+    object-fit: contain;
+}
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid white;
+    display: inline-block;
+    padding-bottom: 5px;
+    color: black;
+}
+.form-title {
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* ---------- Input Group ---------- */
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 1rem;
+}
+
+input {
+    width: 100%;
+    padding: 12px 12px 12px 38px;
+    border: none;
+    border-bottom: 2px solid #757575;
+    font-size: 1rem;
+    color: #333;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: hsl(327, 90%, 28%);
+    outline: none;
+}
+
+input::placeholder {
+    color: transparent;
+}
+
+label {
+    position: absolute;
+    top: 50%;
+    left: 38px;
+    transform: translateY(-50%);
+    color: #757575;
+    transition: 0.3s ease all;
+    pointer-events: none;
+    font-size: 0.95rem;
+}
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+    top: -12px;
+    left: 32px;
+    font-size: 0.85rem;
+    color: hsl(327, 90%, 28%);
+}
+
+/* ---------- Password Toggle ---------- */
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.toggle-password:hover {
+    color: black;
+}
+
+/* ---------- Recover Link ---------- */
+.recover {
+    text-align: right;
+    margin: -10px 0 20px;
+    font-size: 0.9rem;
+}
+
+.recover a {
+    color: rgb(26, 26, 173);
+    text-decoration: none;
+}
+
+.recover a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+/* ---------- Button ---------- */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #0044cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #07001f;
+}
+
+/* ---------- OR Text ---------- */
+.or {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* ---------- Social Icons ---------- */
+.icons {
+    text-align: center;
+}
+
+.icons i {
+    padding: 12px 15px;
+    margin: 0 8px;
+    font-size: 1.3rem;
+    color: rgb(125, 140, 235);
+    border: 2px solid #dfe9f5;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.icons i:hover {
+    background: #07001f;
+    color: white;
+    border-color: rgb(125, 125, 235);
+}
+
+/* ---------- Sign Up/Sign In Links ---------- */
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    padding: 0 5px;
+    color: #000000; 
+}
+
+#signUpButton,
+#signInButton {
+    background: transparent;
+    border: none;
+    color: #0044cc; /* Dark blue for contrast */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#signUpButton:hover,
+#signInButton:hover {
+    text-decoration: underline;
+    color: #07001f; /* Even darker blue on hover */
+}
+
+/* ---------- Message Box ---------- */
+.messageDiv {
+    background: hsl(327, 90%, 28%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fadeOut 7s forwards;
+}
+
+/* ---------- Responsive Tweaks ---------- */
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+    .main-heading {
+        font-size: 1.8rem;
+        margin: 15px 0 20px;
+    }
+    .form-title {
+        font-size: 1.5rem;
+    }
+    .icons i {
+        padding: 10px;
+        margin: 0 5px;
+    }
+    .links {
+        font-size: 0.85rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 2.5rem;
+    }
+    .main-heading {
+        font-size: 2.5rem;
+    }
+    .form-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* Fade Out Animation */
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}

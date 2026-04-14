@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+    
+</head>
+<body>
+    <div class="logo-container">
+        <img src="image2.png" alt="GEOMITRA Logo">
+    </div>
+    
+    <div class="quiz-container">
+        <div id="question-box">
+            <div id="timer-box">
+                <p>⏳ Time Left: <span id="timer">05:00</span></p>
+            </div>
+            <!-- Question Text -->
+            <p id="question-text">1. What is the capital of France?</p>  
+
+            <!-- Question Image -->
+            <img id="question-image" src="image1.png" alt="Question Image" style="display: block; max-width: 100%;">
+
+            <!-- Answer Input -->
+            <input type="text" id="answer-box" placeholder="Enter your answer...">
+            
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button id="prev-btn" disabled>Previous</button>
+                <button id="next-btn">Next</button>
+                <button id="submit-btn" style="display: none;">Submit</button>
+            </div>
+            
+            <!-- Notes Section -->
+            <div id="notes-section">
+                <h3>Guidance</h3>
+                <p id="notes-box">Answer the question based on the given image and description.</p>
+            </div>
+        </div>
+    </div>
+    <div id="resume-modal" class="modal">
+        <div class="modal-content">
+            <h2>Quiz Suspended</h2>
+            <p>You have violated the quiz rules too many times. Enter the resume password to continue.</p>
+            <input type="password" id="resume-password" placeholder="Enter Password">
+            <button onclick="verifyResumePassword()">Resume Quiz</button>
+        </div>
+    </div>
+
+    <script type="module" src="quiz-runtime.js"></script>
+</body>
+</html>

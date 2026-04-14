@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Completed</title>
+    <link rel="stylesheet" href="score.css">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="image2.png" alt="GEOMITRA Logo">
+    </div>
+    
+    <h2>Quiz Completed</h2>
+    <p>Thank you for participating.</p>
+    <button id="backButton" class="back">BACK</button>
+
+    <script>
+        document.getElementById("backButton").addEventListener("click", function () {
+            window.location.href = "dashboard.html"; // Change this to your quiz start page if needed
+        });
+    </script>
+</body>
+</html>

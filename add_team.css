@@ -1,0 +1,302 @@
+/* ✅ Import Poppins Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* ✅ Change the page background color */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FDB913; /* Changed to requested color */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+/* ✅ Main Heading */
+h1 {
+    margin-top: 80px;
+    font-size: 36px;
+    font-weight: 700;
+    color: rgb(13, 105, 225);
+}
+
+/* ✅ Adjust for tablets (768px and below) */
+@media (max-width: 7680px) {
+    h1 {
+        font-size: 28px; /* Reduce font size */
+        margin-top: 90px; /* Adjust spacing */
+    }
+}
+
+/* ✅ Adjust for mobile devices (480px and below) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px; /* Further reduce font size */
+        margin-top: 90px; /* Adjust spacing for small screens */
+    }
+}
+.logo-container {
+    position: fixed; /* Stick it at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto; /* Let it adjust based on content */
+    background-color: #2E3192; /* Full width background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0; /* Extra padding for spacing */
+    z-index: 1000; /* Keep it above other elements */
+}
+
+.logo-container img {
+    width: auto;
+    max-width: 80%;
+    height: auto;
+    max-height: 80px; /* Adjusted for better scaling */
+    object-fit: contain;
+}
+/* ✅ Centered Container with Glassmorphism */
+.container {
+    background: rgba(255, 255, 255, 1); /* Ensure white background remains */
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    margin: 30px auto;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* ✅ Add & Submit Buttons (Same Size) */
+button {
+    background: linear-gradient(135deg, #213041, #0056b3);
+    color: white;
+    border: none;
+    padding: 15px 0;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    width: 150px; /* Fixed width for consistency */
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff6804, #cc5500);
+    transform: scale(1.05);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* ✅ Input Fields (Same Width) */
+.input-box {
+    display: none;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    width: calc(100% - 24px); /* Full width minus padding */
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ✅ Group input and button horizontally */
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 420px;
+    margin: 10px auto;
+}
+
+.input-group input[type="text"] {
+    flex: 1;
+    margin: 0;
+}
+
+.input-group button {
+    margin: 0;
+}
+
+/* ✅ List of Team Members */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.2);
+    color: rgb(19, 72, 208);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ✅ Delete Button inside List */
+li button {
+    background: transparent;
+    border: none;
+    color: #ff4c4c;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.2s ease;
+}
+
+li button:hover {
+    color: #ff0000;
+}
+
+/* ✅ Back Arrow */
+.back-arrow {
+    position: absolute;
+    top: 20px;  /* Adjust top position */
+    left: 20px; /* Adjust left position */
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+    z-index: 1000; /* Ensure it stays above images */
+}
+@media (max-width: 768px) {
+    .back-arrow {
+        top: 10px;  /* Adjust for smaller screens */
+        left: 10px;
+        font-size: 20px; /* Reduce size */
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-arrow {
+        top: 8px;
+        left: 8px;
+        font-size: 18px;
+        padding: 6px;
+    }
+}
+
+/* ✅ Hover effect */
+.back-arrow:hover {
+    transform: scale(1.1);
+}
+
+/* ✅ Menu Button */
+.menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    z-index: 100;
+}
+
+/* ✅ Menu Options Dropdown */
+.menu-options {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    z-index: 200;
+    width: 160px;
+    text-align: left;
+}
+
+.menu-options div {
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.menu-options div:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* ✅ Section Heading */
+h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: rgb(9, 9, 9);
+}
+
+/* ✅ Responsive Design */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 20px;
+        margin: 80px auto;
+    }
+
+    button {
+        padding: 12px 0;
+        font-size: 14px;
+        width: 120px; /* Adjust button width for mobile */
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .back-arrow, .menu {
+        font-size: 22px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+
+.add-team-wrapper {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    margin-bottom: 20px; /* Space below button */
+}
+
+#addTeamBtn {
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+#addTeamBtn:hover {
+    background: linear-gradient(90deg, #0056b3, #007bff);
+    transform: translateY(-2px);
+}

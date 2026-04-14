@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Team - GEOMITRA 2025</title>
+    <link rel="stylesheet" href="add_team.css">
+</head>
+<body>
+    <!-- Back Button (Always Visible) -->
+    <div class="logo-container">
+        <img src="image2.png" alt="GEOMITRA Logo">
+    </div>
+    <div class="back-arrow" onclick="goBack()">⬅</div>
+
+
+
+
+    <h1>GEOMITRA 2025</h1>
+
+    <!-- Add Team Section -->
+    <!-- Add Team Section -->
+    <!-- Add Team Section -->
+<div class="container">
+    <div class="add-team-wrapper"> <!-- ✅ Wrapper added for centering -->
+        <button id="addTeamBtn" onclick="showInput()">Add Team</button> <!-- Centered Button -->
+    </div>
+    <div class="input-box" id="inputBox" style="display: none;">
+        <input type="text" id="teamName" placeholder="Enter Name">
+        <input type="text" id="teamUSN" placeholder="Enter USN">
+        <button id="submitBtn">Submit</button>
+    </div>
+</div>
+
+    
+    
+
+
+    <!-- Team List Section -->
+    <div class="container">
+        <h2>Team Members</h2>
+        <ul id="teamList"></ul>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script type="module" src="add_team.js"></script>
+
+    <script>
+        function goBack() {
+            window.location.href = "dashboard.html"; // Redirect to Dashboard
+        }
+
+        function toggleMenu() {
+            var menu = document.getElementById("menuOptions");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }
+
+        function showInput() {
+            document.getElementById("inputBox").style.display = "block";
+        }
+
+        function openSettings() {
+            alert("Settings page is under development!");
+        }
+
+        function logout() {
+            window.location.href = "index.html"; // Redirect to login page
+        }
+    </script>
+</body>
+</html>
+

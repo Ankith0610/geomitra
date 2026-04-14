@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Geomitra</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="image2.png" alt="GEOMITRA Logo">
+    </div>
+
+    <main class="admin-shell">
+        <section class="hero-card">
+            <div>
+                <p class="eyebrow">Owner Controls</p>
+                <h1>Admin Panel</h1>
+                <p id="adminStatus">Checking your access...</p>
+            </div>
+            <div class="hero-actions">
+                <button id="backButton" type="button" class="secondary-btn">Back to Dashboard</button>
+                <button id="logoutButton" type="button" class="secondary-btn">Logout</button>
+            </div>
+        </section>
+
+        <section id="claimSection" class="claim-card" hidden>
+            <h2>Claim Ownership</h2>
+            <p id="claimMessage">No owner is set yet for this website.</p>
+            <button id="claimOwnerButton" type="button">Claim owner access</button>
+        </section>
+
+        <section id="lockedSection" class="claim-card" hidden>
+            <h2>Access Restricted</h2>
+            <p id="lockedMessage">This panel can only be opened by the current owner.</p>
+        </section>
+
+        <form id="adminForm" class="admin-form" hidden>
+            <section class="card-grid">
+                <div class="card">
+                    <h2>Event Details</h2>
+                    <label>
+                        Event Title
+                        <input id="eventTitle" type="text" placeholder="GEOMITRA QUIZ">
+                    </label>
+                    <label>
+                        Dashboard Message
+                        <input id="dashboardMessage" type="text" placeholder="Welcome message">
+                    </label>
+                    <label>
+                        Quiz Date
+                        <input id="quizDate" type="text" placeholder="22-03-2025">
+                    </label>
+                    <label>
+                        Quiz Time
+                        <input id="quizTime" type="text" placeholder="10:00 AM">
+                    </label>
+                    <label>
+                        Quiz Duration (minutes)
+                        <input id="quizDurationMinutes" type="number" min="1" step="1" placeholder="120">
+                    </label>
+                </div>
+
+                <div class="card">
+                    <h2>Access Settings</h2>
+                    <label>
+                        Allowed Email Domain
+                        <input id="allowedEmailDomain" type="text" placeholder="nmamit.in">
+                    </label>
+                    <label>
+                        Quiz Start Password
+                        <input id="quizPassword" type="text" placeholder="Start password">
+                    </label>
+                    <label>
+                        Resume Password
+                        <input id="resumePassword" type="text" placeholder="Resume password">
+                    </label>
+                    <div class="meta-box">
+                        <p><strong>Owner Email:</strong> <span id="ownerEmail">Not assigned</span></p>
+                        <p><strong>Last Updated:</strong> <span id="updatedAt">Not yet saved</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="section-header">
+                    <div>
+                        <h2>Instructions</h2>
+                        <p>Write one instruction per line. The website will number them automatically.</p>
+                    </div>
+                </div>
+                <textarea id="instructionsText" rows="12" placeholder="Enter one instruction per line"></textarea>
+            </section>
+
+            <section class="card">
+                <div class="section-header">
+                    <div>
+                        <h2>Questions</h2>
+                        <p>Use image file names that already exist in the project folder, such as <code>blank.png</code> or <code>GM_Image_01.png</code>.</p>
+                    </div>
+                    <button id="addQuestionButton" type="button" class="secondary-btn">Add Question</button>
+                </div>
+                <div id="questionsContainer" class="question-list"></div>
+            </section>
+
+            <section class="form-actions">
+                <button id="resetDefaultsButton" type="button" class="secondary-btn">Reset to Current Defaults</button>
+                <button id="saveButton" type="submit">Save Admin Changes</button>
+            </section>
+        </form>
+    </main>
+
+    <script type="module" src="admin.js"></script>
+</body>
+</html>

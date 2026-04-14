@@ -1,0 +1,244 @@
+body {
+    background: linear-gradient(180deg, #fdb913 0%, #f3a100 100%);
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    color: #10213f;
+}
+
+.logo-container {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #2e3192;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 0;
+    z-index: 10;
+    box-shadow: 0 10px 25px rgba(15, 21, 67, 0.2);
+}
+
+.logo-container img {
+    width: auto;
+    max-width: 80%;
+    max-height: 76px;
+    object-fit: contain;
+}
+
+.admin-shell {
+    width: min(1120px, calc(100% - 32px));
+    margin: 28px auto 40px;
+    display: grid;
+    gap: 20px;
+}
+
+.hero-card,
+.claim-card,
+.card {
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 18px;
+    box-shadow: 0 18px 45px rgba(22, 28, 45, 0.14);
+    border: 1px solid rgba(46, 49, 146, 0.12);
+}
+
+.hero-card {
+    padding: 24px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #2e3192;
+    margin: 0 0 8px;
+}
+
+.hero-card h1,
+.claim-card h2,
+.card h2 {
+    margin: 0 0 10px;
+}
+
+.hero-card p,
+.claim-card p,
+.card p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.hero-actions,
+.form-actions,
+.section-header {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.claim-card {
+    padding: 24px 28px;
+}
+
+.admin-form {
+    display: grid;
+    gap: 20px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.card {
+    padding: 24px 28px;
+}
+
+label {
+    display: grid;
+    gap: 8px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+input,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #cfd6ea;
+    border-radius: 12px;
+    padding: 12px 14px;
+    font: inherit;
+    color: #13213b;
+    background: #fff;
+}
+
+textarea {
+    min-height: 220px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: 3px solid rgba(46, 49, 146, 0.16);
+    border-color: #2e3192;
+}
+
+button {
+    border: none;
+    border-radius: 12px;
+    padding: 12px 18px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    background: linear-gradient(135deg, #2e3192, #0f73c8);
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(46, 49, 146, 0.18);
+}
+
+button:hover {
+    filter: brightness(1.03);
+    transform: translateY(-1px);
+}
+
+.secondary-btn {
+    background: #eef2ff;
+    color: #213364;
+    box-shadow: none;
+}
+
+.meta-box {
+    margin-top: 6px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: #f7f8ff;
+    border: 1px solid #e1e6fb;
+    display: grid;
+    gap: 8px;
+}
+
+.question-list {
+    display: grid;
+    gap: 16px;
+    margin-top: 18px;
+}
+
+.question-card {
+    border: 1px solid #e0e6f3;
+    border-radius: 16px;
+    padding: 18px;
+    background: #fbfcff;
+    display: grid;
+    gap: 14px;
+}
+
+.question-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.question-card h3 {
+    margin: 0;
+}
+
+.question-card .remove-btn {
+    background: #ffe6e6;
+    color: #8d1d1d;
+    box-shadow: none;
+}
+
+.question-card textarea {
+    min-height: 120px;
+}
+
+.form-actions {
+    justify-content: flex-end;
+    margin-bottom: 24px;
+}
+
+code {
+    background: #eef2ff;
+    padding: 2px 6px;
+    border-radius: 6px;
+}
+
+@media (max-width: 900px) {
+    .hero-card,
+    .section-header,
+    .hero-actions,
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .admin-shell {
+        width: min(100% - 18px, 1000px);
+        margin-top: 16px;
+    }
+
+    .hero-card,
+    .claim-card,
+    .card {
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .logo-container img {
+        max-height: 56px;
+    }
+}

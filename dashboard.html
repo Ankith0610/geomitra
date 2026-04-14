@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geomitra 2025 Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="image2.png" alt="GEOMITRA Logo">
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">×</button>
+        
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#" onclick="redirectToProfile()">Profile</a></li>
+            <li><a href="add_team.html">Add Team</a></li>
+            <li id="adminMenuItem" hidden><a href="admin.html" id="adminMenuLink">Admin Panel</a></li>
+            <li><a href="#" onclick="redirectToLogin()">Logout</a></li>
+        </ul>
+        
+    </div>
+
+    <!-- Menu Button -->
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+
+    <!-- Main Content -->
+    <div class="content">
+        <p id="dashboardMessage">Welcome to your dashboard. Add your team member.</p>
+        <p class="owner-badge" id="ownerBadge" hidden>Owner access available from the menu</p>
+    </div>
+    <!-- Quiz Information -->
+<div class="quiz">
+    <h2 id="geomitraquiz">GEOMITRA QUIZ</h2>
+    <p><strong>Date:</strong> <span id="quizDate">22-03-2025</span></p>
+    <p><strong>Time:</strong> <span id="quizTime">10:00 AM</span></p>
+    <p class="hint-text" id="quizHint">Use the menu to manage your team and profile.</p>
+
+    <!-- Centered Start Quiz Button -->
+    <div class="quiz-button-container">
+        <button class="start-quiz-btn" id="startQuizBtn" type="button">Start Quiz</button>
+    </div>
+</div>
+
+
+
+    <script type="module" src="dashboard.js"></script>
+</body>
+</html>

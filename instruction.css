@@ -1,0 +1,134 @@
+/* ✅ Reset and General Styles */
+body {
+    background-color: #FDB913; /* Yellow-Gold Background */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 120px; /* Adjusted to prevent overlap with logo */
+    margin: 0;
+}
+
+/* ✅ Logo and Header Styling */
+.logo-container {
+    position: fixed; /* Stick it at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto; /* Let it adjust based on content */
+    background-color: #2E3192; /* Full width background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0; /* Extra padding for spacing */
+    z-index: 1000; /* Keep it above other elements */
+}
+
+.logo-container img {
+    width: auto;
+    max-width: 80%;
+    height: auto;
+    max-height: 80px; /* Adjusted for better scaling */
+    object-fit: contain;
+}
+
+/* ✅ Main Instruction Box */
+.instruction-content {
+    width: 90%;
+    max-width: 650px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: 0px; /* Ensures it stays below the logo */
+    text-align: left;
+}
+
+/* ✅ Heading */
+.instruction-content h2 {
+    color: #1C1C1C; /* Dark Grey for Professional Look */
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* ✅ Bullet Points (Auto-Scaling for Readability) */
+.instruction-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ✅ Styling for Each Point */
+.instruction-content ul li {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    font-weight: 500;
+    color: #333; /* Darker Grey for Readability */
+    margin: 6px 0;
+    line-height: 1.4;
+    padding-left: 20px;
+    position: relative;
+}
+
+/* ✅ OK Button Styling */
+.button-container {
+    text-align: center;
+    position: fixed;
+    bottom: 15px;
+    width: 100%;
+}
+
+/* ✅ Button Design */
+button {
+    background: #2E3192;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+/* ✅ Hover Effect */
+button:hover {
+    background: #1C1F6A;
+    transform: scale(1.05);
+}
+
+/* 📱 Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .instruction-content {
+        width: 95%;
+        top: 0px;
+        padding: 15px;
+    }
+    .instruction-content ul li {
+        font-size: clamp(0.85rem, 2vw, 1rem);
+    }
+    button {
+        font-size: 0.85rem;
+        padding: 10px 20px;
+    }
+}
+
+/* 📱 Extra small screens (under 480px) */
+@media screen and (max-width: 480px) {
+    .instruction-content {
+        top: 0px;
+        padding: 12px;
+    }
+    .instruction-content ul li {
+        font-size: clamp(0.8rem, 1.8vw, 0.95rem);
+    }
+    button {
+        font-size: 0.8rem;
+        padding: 8px 18px;
+    }
+}

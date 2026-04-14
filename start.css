@@ -1,0 +1,146 @@
+/* ✅ Reset and General Styles */
+body {
+    background-color: #FDB913; /* Yellow-Gold Background */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 120px; /* Adjusted to prevent overlap with logo */
+    margin: 0;
+}
+
+/* ✅ Logo and Header Styling */
+.logo-container {
+    position: fixed; /* Stick it at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto; /* Let it adjust based on content */
+    background-color: #2E3192; /* Full width background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0; /* Extra padding for spacing */
+    z-index: 1000; /* Keep it above other elements */
+}
+
+.logo-container img {
+    width: auto;
+    max-width: 80%;
+    height: auto;
+    max-height: 80px; /* Adjusted for better scaling */
+    object-fit: contain;
+}
+
+/* Center the container both horizontally & vertically */
+.container {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+    /* Centering */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* ✅ Heading */
+h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#quizMeta {
+    color: #2e3192;
+    font-weight: 600;
+    margin: 0 0 12px;
+}
+
+/* ✅ Input Field */
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ✅ Button */
+button {
+    width: 90%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 600px) {
+    body {
+        padding-top: 120px; /* Adjust for smaller phones */
+    }
+
+    .container {
+        width: 95%;
+        padding: 15px;
+        top: 55%; /* Adjusted positioning */
+        transform: translate(-50%, -50%);
+    }
+
+    .logo-container img {
+        max-height: 50px;
+    }
+
+    input,
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        top: 58%; /* More downward for very small screens */
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    input,
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .logo-container img {
+        max-height: 45px;
+    }
+}

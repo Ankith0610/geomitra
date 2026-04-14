@@ -1,0 +1,244 @@
+/* ✅ Reset and General Styles */
+body {
+    background-color: #FDB913; /* Yellow-Gold Background */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 120px; /* Adjusted to prevent overlap with logo */
+    margin: 0;
+}
+
+/* ✅ Logo and Header Styling */
+.logo-container {
+    position: fixed; /* Keep it fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2E3192;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+.quiz-container {
+    max-height: 80vh; /* Adjust for screen size */
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin-bottom: 20px; /* Prevent content from getting cut */
+    
+}
+
+
+
+.logo-container img {
+    width: auto;
+    max-width: 80%;
+    height: auto;
+    max-height: 80px; /* Adjusted for better scaling */
+    object-fit: contain;
+}
+.quiz-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    margin-top: 80px; /* Add margin to push it down */
+}
+
+
+#question-box {
+    margin-bottom: 20px;
+}
+
+#question-text {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#question-image {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    max-height: 260px;
+    display: block;
+    margin: 10px auto;
+}
+
+textarea {
+    width: 50px; /* Small width for a single number/word */
+    height: 30px; /* Small height */
+    font-size: 16px;
+    text-align: center; /* Center the input */
+    resize: none; /* Disable resizing */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;  /* Center buttons horizontally */
+    gap: 20px;  /* Space between buttons */
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+
+#answer-box {
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    display: block;
+}
+
+#notes-section {
+    margin-top: 10px;
+    padding: 10px;
+    border-top: 1px solid #ccc; /* Separate it visually */
+    background: #f9f9f9; /* Light background */
+    font-size: 14px;
+    color: #333;
+}
+
+#notes-box {
+    font-size: 14px;
+    color: #333;
+    padding: 5px;
+    text-align: left;
+    white-space: pre-line;
+}
+
+/* Timer */
+#timer-box {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+input {
+    padding: 8px;
+    margin: 10px 0;
+}
+
+/* ✅ Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 100px; /* Reduce padding for better spacing */
+    }
+
+    .logo-container {
+        padding: 5px 0;
+    }
+
+    .logo-container img {
+        max-width: 70%;
+        max-height: 50px;
+    }
+
+    .quiz-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    #question-text {
+        font-size: 16px;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+
+/* ✅ Extra Small Screens */
+@media screen and (max-width: 480px) {
+    body {
+        padding-top: 100px;
+    }
+
+    .logo-container img {
+        max-width: 80%;
+        max-height: 40px;
+    }
+
+    .quiz-container {
+        width: 98%;
+        padding: 10px;
+    }
+
+    #question-text {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    #timer-box {
+        font-size: 18px;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+}
